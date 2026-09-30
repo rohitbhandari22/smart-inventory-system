@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Inventory Management</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+```
+<aside class="sidebar">
+    <h2>SmartStock</h2>
+
+    <p class="active">Dashboard</p>
+    <p>Inventory</p>
+    <p>Suppliers</p>
+    <p>Orders</p>
+    <p>Reports</p>
+</aside>
+
+<main class="main-content">
+
+    <header>
+        <div>
+            <h1>Inventory Dashboard</h1>
+            <p>Monitor stock and supply chain performance</p>
+        </div>
+
+        <button onclick="generateReport()">Generate Report</button>
+    </header>
+
+    <section class="cards">
+
+        <div class="card">
+            <h3>Total Products</h3>
+            <h2>1,248</h2>
+            <span>+6.2% this month</span>
+        </div>
+
+        <div class="card">
+            <h3>Total Stock</h3>
+            <h2>18,540</h2>
+            <span>Units available</span>
+        </div>
+
+        <div class="card">
+            <h3>Low Stock</h3>
+            <h2>42</h2>
+            <span class="warning">Needs attention</span>
+        </div>
+
+        <div class="card">
+            <h3>Suppliers</h3>
+            <h2>86</h2>
+            <span>Active suppliers</span>
+        </div>
+
+    </section>
+
+    <section class="charts">
+
+        <div class="chart-box">
+            <h2>Stock Overview</h2>
+            <canvas id="stockChart"></canvas>
+        </div>
+
+        <div class="chart-box">
+            <h2>Inventory Categories</h2>
+            <canvas id="categoryChart"></canvas>
+        </div>
+
+    </section>
+
+    <section class="table-box">
+
+        <h2>Inventory Items</h2>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search products..."
+            onkeyup="searchProducts()"
+        >
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Category</th>
+                    <th>Stock</th>
+                    <th>Supplier</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody id="inventoryTable">
+
+                <tr>
+                    <td>Laptop Pro</td>
+                    <td>Electronics</td>
+                    <td>125</td>
+                    <td>Tech Supplies Ltd</td>
+                    <td class="good">In Stock</td>
+                </tr>
+
+                <tr>
+                    <td>Office Chair</td>
+                    <td>Furniture</td>
+                    <td>18</td>
+                    <td>Furniture World</td>
+                    <td class="warning">Low Stock</td>
+                </tr>
+
+                <tr>
+                    <td>Wireless Mouse</td>
+                    <td>Accessories</td>
+                    <td>240</td>
+                    <td>Global Tech</td>
+                    <td class="good">In Stock</td>
+                </tr>
+
+                <tr>
+                    <td>Monitor 24"</td>
+                    <td>Electronics</td>
+                    <td>8</td>
+                    <td>Display Hub</td>
+                    <td class="danger">Critical</td>
+                </tr>
+
+                <tr>
+                    <td>Keyboard</td>
+                    <td>Accessories</td>
+                    <td>95</td>
+                    <td>Global Tech</td>
+                    <td class="good">In Stock</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+```
+
+</body>
+</html>
